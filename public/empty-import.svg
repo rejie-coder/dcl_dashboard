@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Worksheet transforming into SPC chart lines -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Worksheet -->
+    <rect x="64" y="120" width="240" height="320" rx="20" stroke="#D1D5DB" stroke-width="3"/>
+    <rect x="64" y="120" width="240" height="52" rx="20" stroke="#D1D5DB" stroke-width="3"/>
+    <line x1="64" y1="172" x2="304" y2="172" stroke="#D1D5DB" stroke-width="3"/>
+    <line x1="144" y1="172" x2="144" y2="440" stroke="#E5E7EB" stroke-width="2.5"/>
+    <line x1="224" y1="172" x2="224" y2="440" stroke="#E5E7EB" stroke-width="2.5"/>
+    <line x1="64" y1="232" x2="304" y2="232" stroke="#E5E7EB" stroke-width="2.5"/>
+    <line x1="64" y1="292" x2="304" y2="292" stroke="#E5E7EB" stroke-width="2.5"/>
+    <line x1="64" y1="352" x2="304" y2="352" stroke="#E5E7EB" stroke-width="2.5"/>
+    <line x1="64" y1="412" x2="304" y2="412" stroke="#E5E7EB" stroke-width="2.5"/>
+    <rect x="84" y="140" width="44" height="12" rx="6" fill="#007AFF" opacity="0.85" stroke="none"/>
+    <rect x="160" y="198" width="48" height="10" rx="5" fill="#D1D5DB" stroke="none"/>
+    <rect x="240" y="198" width="44" height="10" rx="5" fill="#D1D5DB" stroke="none"/>
+    <rect x="88" y="258" width="36" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="160" y="258" width="48" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="240" y="258" width="44" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="88" y="318" width="36" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="160" y="318" width="48" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="240" y="318" width="44" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="88" y="378" width="36" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="160" y="378" width="48" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+    <rect x="240" y="378" width="44" height="10" rx="5" fill="#E5E7EB" stroke="none"/>
+
+    <!-- Transformation arrow -->
+    <path d="M344 280 L416 280" stroke="#9CA3AF" stroke-width="4" stroke-dasharray="2 10"/>
+    <path d="M404 262 L428 280 L404 298" stroke="#007AFF" stroke-width="5"/>
+
+    <!-- Chart panel -->
+    <rect x="460" y="120" width="280" height="320" rx="20" stroke="#D1D5DB" stroke-width="3"/>
+    <line x1="492" y1="160" x2="492" y2="408" stroke="#E5E7EB" stroke-width="2.5"/>
+    <line x1="492" y1="408" x2="712" y2="408" stroke="#E5E7EB" stroke-width="2.5"/>
+    <!-- UCL / LCL -->
+    <line x1="492" y1="216" x2="712" y2="216" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="8 8"/>
+    <line x1="492" y1="352" x2="712" y2="352" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="8 8"/>
+    <!-- CL -->
+    <line x1="492" y1="284" x2="712" y2="284" stroke="#64748B" stroke-width="3"/>
+    <!-- measured series -->
+    <path d="M500 292 L532 268 L564 300 L596 252 L628 288 L660 200 L692 236"
+          stroke="#007AFF" stroke-width="5"/>
+    <circle cx="660" cy="200" r="9" fill="#FF3B30" stroke="#FFFFFF" stroke-width="4"/>
+    <circle cx="692" cy="236" r="7" fill="#FFFFFF" stroke="#007AFF" stroke-width="4"/>
+    <!-- green check badge -->
+    <circle cx="700" cy="152" r="18" fill="#34C759" stroke="none"/>
+    <path d="M691 152 L698 159 L710 146" stroke="#FFFFFF" stroke-width="4"/>
+  </g>
+</svg>

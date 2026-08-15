@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn/ui tokens (kept for generated primitives) */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* DCL Pulse design tokens */
+    --dcl-background: #F5F7FB;
+    --dcl-surface: #FFFFFF;
+    --dcl-surface-raised: #FFFFFF;
+    --dcl-surface-tint: #F8FAFC;
+    --dcl-ink-900: #111827;
+    --dcl-ink-700: #374151;
+    --dcl-ink-500: #6B7280;
+    --dcl-ink-400: #9CA3AF;
+    --dcl-line: #E5E7EB;
+    --dcl-line-strong: #CBD5E1;
+
+    /* Domain accents */
+    --domain-clinical: #007AFF;
+    --domain-clinical-soft: #EAF3FF;
+    --domain-safety: #FF375F;
+    --domain-safety-soft: #FFF0F3;
+    --domain-financial: #30B0C7;
+    --domain-financial-soft: #EAFBFD;
+    --domain-operational: #FF9F0A;
+    --domain-operational-soft: #FFF7E8;
+    --domain-hr: #AF52DE;
+    --domain-hr-soft: #F8EFFF;
+
+    /* Status */
+    --status-stable: #34C759;
+    --status-watch: #FFCC00;
+    --status-action: #FF3B30;
+    --status-neutral: #8E8E93;
+    --limit-line: rgba(100, 116, 139, 0.7);
+    --center-line: rgba(71, 85, 105, 0.85);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply text-foreground;
+    background-color: var(--dcl-background);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(640px 420px at 8% -4%, rgba(0, 122, 255, 0.06), transparent 70%),
+      radial-gradient(720px 520px at 96% -6%, rgba(90, 200, 250, 0.05), transparent 70%);
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  }
+  .font-num, code, kbd {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 2px solid var(--domain-clinical);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Domain accent utility classes — used via data-domain on containers */
+  .domain-accent { color: var(--domain-accent, var(--domain-clinical)); }
+  .domain-accent-bg { background-color: var(--domain-accent, var(--domain-clinical)); }
+  .domain-accent-soft { background-color: var(--domain-accent-soft, var(--domain-clinical-soft)); }
+  .domain-accent-border { border-color: var(--domain-accent, var(--domain-clinical)); }
+
+  .dcl-card {
+    background: var(--dcl-surface);
+    border: 1px solid var(--dcl-line);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 16px 40px rgba(15, 23, 42, .06);
+  }
+  .dcl-card-hover {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+  .dcl-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .10);
+  }
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 100ms !important;
+    }
+  }
+}
