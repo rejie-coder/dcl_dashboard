@@ -71,7 +71,7 @@ export function SidebarNav({ collapsed, onToggle }: SidebarNavProps) {
       <nav className={cn('flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-3', collapsed && 'items-center px-3')}>
         <NavLink to="/" end className={({ isActive }) => linkClass(isActive)} style={({ isActive }) => activeStyle(isActive, '#007AFF')}>
           <LayoutDashboard className="h-[18px] w-[18px] shrink-0 transition-transform duration-150 group-hover:translate-x-0.5" />
-          {!collapsed && <span>Overview</span>}
+          {!collapsed && <span>Hospital indicators</span>}
         </NavLink>
 
         {!collapsed && (
@@ -145,7 +145,7 @@ export function SidebarNav({ collapsed, onToggle }: SidebarNavProps) {
 /** Mobile bottom tab bar */
 export function MobileTabBar() {
   const tabs = [
-    { to: '/', label: 'Overview', icon: LayoutDashboard, end: true },
+    { to: '/', label: 'Indicators', icon: LayoutDashboard, end: true },
     { to: '/domains/clinical-outcome', label: 'Clinical', icon: Activity },
     { to: '/domains/patient-safety', label: 'Safety', icon: ShieldAlert },
     { to: '/data', label: 'Data', icon: Database },

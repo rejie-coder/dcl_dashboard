@@ -20,7 +20,7 @@ export function AppShell() {
       <SidebarNav collapsed={collapsed} onToggle={() => setCollapsed((c) => !c)} />
 
       <div className={cn('flex min-h-[100dvh] flex-col transition-[margin] duration-200 ease-out', collapsed ? 'md:ml-[84px]' : 'md:ml-[264px]')}>
-        <TopBar />
+        {location.pathname !== '/' && <TopBar />}
 
         <main className="mx-auto w-full max-w-[1680px] flex-1 px-3 pb-24 pt-6 md:px-6 md:pb-6">
           <AnimatePresence mode="wait">
@@ -36,7 +36,7 @@ export function AppShell() {
           </AnimatePresence>
         </main>
 
-        <StatusBar />
+        {location.pathname !== '/' && <StatusBar />}
       </div>
 
       <MobileTabBar />

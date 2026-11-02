@@ -280,6 +280,7 @@ export default function DataPage() {
         </motion.div>
       </section>
 
+      <a href="#/" className="block rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm text-blue-800">Have a hospital spreadsheet with Code, Year and Jan–Dec columns? Open Hospital indicators → Import Excel / CSV. This page imports the original DCL raw-return and KPI formats.</a>
       {/* Privacy banner */}
       <motion.button
         initial={{ opacity: 0, y: -12 }}

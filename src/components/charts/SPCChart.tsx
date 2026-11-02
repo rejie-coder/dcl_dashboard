@@ -53,8 +53,9 @@ export function SPCChart({
           borderColor: accent,
           backgroundColor: accent,
           borderWidth: 2.5,
-          tension: 0.28,
-          pointRadius: points.map((p) => (p.signal ? 5 : 2.5)),
+          tension: 0,
+          pointRadius: points.map((p) => (p.signal ? 7 : 3.5)),
+          pointStyle: points.map((p) => p.signal === 'special-cause' ? 'rectRot' as const : p.signal === 'run-rule' ? 'triangle' as const : 'circle' as const),
           pointHoverRadius: 7,
           pointBackgroundColor: points.map((p) =>
             p.signal === 'special-cause' ? '#FF3B30' : p.signal === 'run-rule' ? '#FFCC00' : '#FFFFFF',

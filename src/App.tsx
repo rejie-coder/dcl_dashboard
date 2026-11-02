@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router';
 import { AppShell } from '@/components/layout/AppShell';
+import HospitalPage from '@/pages/HospitalPage';
 import OverviewPage from '@/pages/OverviewPage';
 import DomainPage from '@/pages/DomainPage';
 import DataPage from '@/pages/DataPage';
@@ -9,7 +10,8 @@ export default function App() {
   return (
     <Routes>
       <Route element={<AppShell />}>
-        <Route index element={<OverviewPage />} />
+        <Route index element={<HospitalPage />} />
+        <Route path="overview" element={<OverviewPage />} />
         <Route path="domains/clinical-outcome" element={<DomainPage domainId="clinical-outcome" />} />
         <Route path="domains/patient-safety" element={<DomainPage domainId="patient-safety" />} />
         <Route path="domains/financial-efficiency" element={<DomainPage domainId="financial-efficiency" />} />
